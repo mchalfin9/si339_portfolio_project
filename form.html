@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/kolf.png">
+  <title>Contact</title>
+</head>
+<body>
+
+  <header>
+    <img src="images/page_logo.jpeg" alt="logo" id = "logo">
+    <nav>
+      <ul class="nav_links">
+        <li class="nav_item"><a href= "index.html">Home</a></li>
+        <li class="nav_item"><a href= "reviews.html">Course Reviews</a></li>
+        <li class="nav_item"><a href= "bucketlist.html">Bucket List Courses</a></li>
+        <li class="nav_item now"><a href= "form.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <form action="https://formspree.io/f/xoqpwval" method="POST">
+  <fieldset>
+    <legend>Contact Form</legend>
+    <label for="name_id">Your Name</label> 
+    <input type="text" id="name_id" placeholder="Enter Your Name" name="name">
+
+    <label for="email_id">Your Email</label> 
+    <input type="email" id="email_id" name="email">
+
+
+    <label for="phone_id">Your Phone Number</label> 
+    <input type="tel" id="phone_id" name="phone">
+    <div><span>Format: 123-456-7890</span></div>
+
+
+    <label for="mesg_id">Leave A Message</label> 
+    <textarea name="mesg" id="mesg_id"></textarea>
+
+    <input type="checkbox" id="cbox_id" name="cbox"> 
+    <label for="cbox_id">Remember me</label> 
+
+    <input type="submit" value="Submit the form Now!" >
+  </fieldset>
+ </form>
+ <footer>
+  <p>University of Michigan School of Information <br/>
+    &copy; Max Chalfin 2020</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,391 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: cornflowerblue;
+  font-size: 18px;
+  font-family: 'Releway', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+/* Navbar */
+header{
+  background: #ffffff;
+  border-bottom:5px solid black;
+  border-top: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.nav_links{
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+
+.now a{
+  color: red;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  font-size: x-large;
+}
+.nav_links a:hover, a:focus{
+  color: blue;
+  font-size: x-large;
+  text-decoration-style: solid;  
+}
+
+
+@keyframes logo_wiggle{
+  from {width: 25px;}
+  to {width: 420px;}
+
+} 
+#logo{
+   animation-duration: 3s;
+   animation-name: logo_wiggle;
+}
+
+.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip:focus{
+  top:100px;
+  color: red;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+main{
+  display: block;
+}
+
+div{
+  display: block;
+}
+
+h1{
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  padding: 5px;
+}
+
+h2{
+  font-size: 1.3em;
+  text-align: center;
+  color: black;
+  padding: 5px;
+}
+
+p{
+  padding: 0 15px;
+  text-align: center;
+  display: center;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+
+/*Home*/
+#cover-image img{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  display: block;
+  width: 50%;
+  border: .5em solid black;
+}
+#cover-image img:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+  }
+
+/*Reviews*/
+.container{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  grid-row-gap: 15px;
+}
+
+.container h1{
+  background-attachment: fixed;
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;    
+  color: transparent; 
+  height: 200px;                
+  background-image: url('../images/walk.jpg');
+  grid-column: 1 / -1; 
+  grid-row: 1 / auto;
+}
+
+.metro, .erin, .lawsonia, .blackwolf, .umgc, .os, .fairview, .willow, .fenway{
+  grid-column: 2 /span 1;
+}
+
+.metro-image, .erin-image, .lawsonia-image, .blackwolf-image, .umgc-image, .os-image, .fairview-image, .willow-image, .fenway-image{
+  overflow: hidden;
+  grid-column: 1 / -1;
+  max-height: 700px;
+}
+
+.metro, .metro-image{
+  grid-row: 2 /span 1;
+}
+
+.erin, .erin-image{
+  grid-row: 3 /span 1;
+}
+
+.lawsonia, .lawsonia-image{
+   grid-row: 4 /span 1;
+}
+
+.blackwolf, .blackwolf-image{
+   grid-row: 5 /span 1;
+}
+
+.umgc, .umgc-image{
+  grid-row: 6 /span 1;
+}
+
+.os, .os-image{
+   grid-row: 7 /span 1;
+}
+
+.fairview, .fairview-image{
+   grid-row: 8 /span 1;
+}
+.willow, .willow-image{
+  grid-row: 9 / span 1;;
+}
+.fenway, .fenway-image{
+  grid-row: 10 / span 1;
+}
+
+.text-block{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 10px solid black;
+  padding: 30px;
+  align-self: center;
+}
+
+/*Bucket List*/
+.courses{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#pebble, #valley, #hurst, #chicago, #bandon{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+
+}
+#pebble img, #valley img, #hurst img, #chicago img, #bandon img{
+  margin-bottom: 10px;
+}
+
+.courses img{
+  border: 5px solid black;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  #logo{
+    animation: none;
+  }
+}
+
+
+@media screen and (min-width: 700px){
+  header{
+    background: #ffffff;
+    border-bottom:5px solid black;
+    border-top: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Navbar */
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 15px 50px 15px 50px;
+  }
+
+  /*Reviews*/
+  .container{
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px 400px 400px 400px 400px;
+  }
+
+  .metro, .lawsonia, .umgc, .fairview, .willow, .erin-image, .blackwolf-image, .os-image, .fenway-image{
+    grid-column: 3 /span 2;
+  }
+
+  .metro-image, .lawsonia-image, .umgc-image, .fairview-image, .willow-image, .erin, .blackwolf, .os, .fenway{
+    grid-column: 2 /span 2;
+  }
+
+  /*Bucket List*/
+  .courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px){
+  header{
+    background: #ffffff;
+    border-bottom:5px solid black;
+    border-top: 5px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav_links{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 100px 15px 100px;
+  }
+  /*Reviews*/
+  .container{
+    grid-template-columns: 60px auto 500px auto 60px;
+    grid-template-rows: 420px 420px 420px 420px 420px 420px 420px 420px 420px 420px;
+  }
+
+  .metro, .lawsonia, .umgc, .fairview, .fenway, .erin-image, .blackwolf-image, .os-image, .willow-image{
+    grid-column: 3 /span 2;
+  }
+
+  .metro-image, .lawsonia-image, .umgc-image, .fairview-image, .fenway-image, .erin, .blackwolf, .os, .willow{
+    grid-column: 2 /span 2;
+  }
+
+/*Bucket List*/
+  .courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  #pebble p, #valley p, #hurst p, #chicago p, #bandon p{
+    margin-right:10px;
+    margin-left:10px;
+  }
+  .flip-card1, .flip-card2, .flip-card3, .flip-card4, .flip-card5{
+    perspective: 1000px;
+    width: 360px;
+    height: 250px;
+  }
+  .flip-card-inner1{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flip-card1:hover .flip-card-inner1, .flip-card2:hover .flip-card-inner1, .flip-card3:hover .flip-card-inner1, .flip-card4:hover .flip-card-inner1, .flip-card5:hover .flip-card-inner1{
+    transform: rotateY(180deg);
+  }
+  .flip-card1:focus .flip-card-inner1, .flip-card2:focus .flip-card-inner1, .flip-card3:focus .flip-card-inner1, .flip-card4:focus .flip-card-inner1, .flip-card5:focus .flip-card-inner1{
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front1, .flip-card-back1{
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flip-card-front1{
+    background-color: black;
+    color: black;
+  }
+  
+  .flip-card-back1{
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    transform: rotateY(180deg)
+  }
+
+  #pebble img, #valley img, #hurst img, #chicago img, #bandon img{
+    width: 360px;
+    height: 250px;
+  }
+}
+
